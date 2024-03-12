@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import catboost
-from sklearn.metrics import f1_score, ndcg_score
+from sklearn.metrics import ndcg_score
 import random
 
 
