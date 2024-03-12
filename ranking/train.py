@@ -46,7 +46,7 @@ def get_ndcg(file_name):
         preds = (preds >= 0.5)
         if subdf.head(1)['target'].values:
             if subdf.shape[0] > 1:
-                ndcg += ndcg_score([preds], [np.array(subdf['target'])])
+                ndcg += ndcg_score([np.array(subdf['target'])],[preds.astype(int)])
             else:
                 ndcg += 1 * preds
             count += 1
